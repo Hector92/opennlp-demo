@@ -11,8 +11,6 @@ import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
 
 static String readFile(String path, Charset encoding) 
-		  throws IOException 
-		{
 		  byte[] encoded = Files.readAllBytes(Paths.get(path));
 		  return new String(encoded, encoding);
 		}
