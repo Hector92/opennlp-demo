@@ -10,6 +10,12 @@ import opennlp.tools.tokenize.Tokenizer;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
 
+static String readFile(String path, Charset encoding) 
+		  throws IOException 
+		{
+		  byte[] encoded = Files.readAllBytes(Paths.get(path));
+		  return new String(encoded, encoding);
+		}
 
 public class TokenizerMain
 {
@@ -31,9 +37,7 @@ public class TokenizerMain
 			
 				/* note what happens with the "three depending on which model you use */
 			String[] tokens = tokenizer.tokenize
-					(  "A ranger journeying with Oglethorpe, founder of the Georgia Colony, " 
-							+ " mentions \"three Mounts raised by the Indians over three of their Great Kings" 
-							+ " who were killed in the Wars.\"" );
+					(  readFile("inputfiles/inputtext.txt", StandardCharsets.UTF_8) );
 			
 			for( String token : tokens )
 			{
