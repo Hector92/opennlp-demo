@@ -10,13 +10,13 @@ import opennlp.tools.tokenize.Tokenizer;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
 
-static String readFile(String path, Charset encoding) 
-		  byte[] encoded = Files.readAllBytes(Paths.get(path));
-		  return new String(encoded, encoding);
-		}
 
 public class TokenizerMain
 {
+	public static String readFile(String path, Charset encoding) throws Exception{
+		  byte[] encoded = Files.readAllBytes(Paths.get(path));
+		  return new String(encoded, encoding);
+		}
 	public static void main( String[] args ) throws Exception
 	{
 		
