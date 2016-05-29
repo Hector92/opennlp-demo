@@ -89,7 +89,7 @@ public class TokenizerUnitTesting extends TestCase {
 					(  readFile("inputfiles/inputtext.txt", StandardCharsets.UTF_8) );
 
 				assertEquals(tokens.length, tokensCorrectos.length);
-				for(int i = 0; i < salida.length; i++)
+				for(int i = 0; i < tokens.length; i++)
 					assertTrue(tokens[i].equals(tokensCorrectos[i]));
 
 			}
