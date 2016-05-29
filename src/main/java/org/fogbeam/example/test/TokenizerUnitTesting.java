@@ -80,7 +80,6 @@ public class TokenizerUnitTesting extends TestCase {
 
 
 		InputStream modelIn = new FileInputStream( "models/en-token.model" );
-		try {
 			try {
 				TokenizerModel model = new TokenizerModel(modelIn);
 				Tokenizer tokenizer = new TokenizerME(model);
@@ -92,23 +91,22 @@ public class TokenizerUnitTesting extends TestCase {
 					assertTrue(tokens[i].equals(tokensCorrectos[i]));
 
 			}
-			catch(IOException e) {
-				e.printStackTrace();
-			}
-			finally {
-				if( modelIn != null ) {
-					try {
-						modelIn.close();
-					}
-					catch( IOException e ) {
-					}
+		catch( IOException e )
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if( modelIn != null )
+			{
+				try
+				{
+					modelIn.close();
+				}
+				catch( IOException e )
+				{
 				}
 			}
-		} catch(FileNotFoundException e1) {
-			e1.printStackTrace();
 		}
-
-
 	}
-
 }
