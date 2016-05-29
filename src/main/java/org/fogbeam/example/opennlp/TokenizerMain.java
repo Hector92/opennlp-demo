@@ -31,9 +31,9 @@ public class TokenizerMain
   /**
   * Convierte el contenido de un fichero a una cadena.
   * @param path Directorio del fichero a convertir.
-  * @param enconding Juego de caracteres utilizado en dicho fichero
+  * @param encoding Juego de caracteres utilizado en dicho fichero
   * @return Retorna la cadena ya transformada.
-
+  * @throw Exception Cadena de salida
   */
 	public static String readFile(String path, Charset encoding) throws Exception{
 		  byte[] encoded = Files.readAllBytes(Paths.get(path));
@@ -45,6 +45,8 @@ public class TokenizerMain
   * La cadena se extrae de un fichero utilizando el metodo readFile
   * @see TokenizerMain#readFile(String, Charset)
   * @version 1.1
+  * @param args Argumentos de entrada
+  * @throw Exception Exception
   */
 	public static void main( String[] args ) throws Exception
 	{
