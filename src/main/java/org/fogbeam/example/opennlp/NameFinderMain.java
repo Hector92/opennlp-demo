@@ -15,6 +15,7 @@ public class NameFinderMain
 {
 	/**
 	 * @param args Argumento
+	 * @throws Exception excepcion
 	 */
 	public static void main( String[] args ) throws Exception
 	{
