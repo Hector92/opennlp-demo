@@ -14,6 +14,7 @@ import opennlp.tools.util.Span;
 public class NameFinderMain
 {
 	/**
+	 * JavadocFirstExample
 	 * @param args Argumento
 	 * @throws Exception excepcion
 	 */
