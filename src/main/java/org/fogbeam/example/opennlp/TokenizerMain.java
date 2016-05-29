@@ -33,7 +33,6 @@ public class TokenizerMain
   * @param path Directorio del fichero a convertir.
   * @param encoding Juego de caracteres utilizado en dicho fichero
   * @return Retorna la cadena ya transformada.
-  * @throws Exception Cadena de salida
   */
 	public static String readFile(String path, Charset encoding) throws Exception{
 		  byte[] encoded = Files.readAllBytes(Paths.get(path));
