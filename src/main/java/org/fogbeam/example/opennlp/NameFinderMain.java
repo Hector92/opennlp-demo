@@ -14,7 +14,7 @@ import opennlp.tools.util.Span;
 public class NameFinderMain
 {
 	/**
-	 * @param args
+	 * @param args Argumento
 	 */
 	public static void main( String[] args ) throws Exception
 	{
