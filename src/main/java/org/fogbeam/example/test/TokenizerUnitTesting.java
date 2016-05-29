@@ -81,7 +81,6 @@ public class TokenizerUnitTesting extends TestCase {
 
 
 		InputStream modelIn = new FileInputStream( "models/en-token.model" );
-		try {
 			try {
 				TokenizerModel model = new TokenizerModel(modelIn);
 				Tokenizer tokenizer = new TokenizerME(model);
@@ -105,11 +104,6 @@ public class TokenizerUnitTesting extends TestCase {
 					}
 				}
 			}
-		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
-		}
-
-
 	}
 
 }
