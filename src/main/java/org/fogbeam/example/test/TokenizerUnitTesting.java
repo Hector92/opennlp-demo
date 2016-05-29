@@ -25,7 +25,7 @@ public class TokenizerUnitTesting extends TestCase {
 		}
 	
 @Test
-	public void checkCorrectTokens() {
+	public void checkCorrectTokens() throws Exception{
 		String[] tokensCorrectos = {		
 "It",
 "is",
