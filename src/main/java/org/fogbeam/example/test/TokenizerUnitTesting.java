@@ -1,7 +1,7 @@
-
 package org.fogbeam.example.opennlp.test;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -80,6 +80,7 @@ public class TokenizerUnitTesting extends TestCase {
 
 
 		InputStream modelIn = new FileInputStream( "models/en-token.model" );
+		try {
 			try {
 				TokenizerModel model = new TokenizerModel(modelIn);
 				Tokenizer tokenizer = new TokenizerME(model);
@@ -103,6 +104,11 @@ public class TokenizerUnitTesting extends TestCase {
 					}
 				}
 			}
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
+
+
 	}
 
 }
