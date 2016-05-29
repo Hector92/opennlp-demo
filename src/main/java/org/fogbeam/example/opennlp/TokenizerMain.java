@@ -1,4 +1,13 @@
-
+/**
+ *  Definicion de la clase Tokenizer.
+ * Esta clase contiene los metodos necesarios para
+ * tratar una cadena de texto en ingles y aplicarle
+ * un modelo de los ya definidos para extraer los diferentes
+ * tokens que contenga, y mostrarlos.
+ * @author Hector92
+ * @author Mindcrime
+ * @version 1.1
+ */
 package org.fogbeam.example.opennlp;
 
 
@@ -19,10 +28,24 @@ import opennlp.tools.tokenize.TokenizerModel;
 
 public class TokenizerMain
 {
+  /**
+  * Convierte el contenido de un fichero a una cadena.
+  * @param path Directorio del fichero a convertir.
+  * @param enconding Juego de caracteres utilizado en dicho fichero
+  * @return Retorna la cadena ya transformada.
+
+  */
 	public static String readFile(String path, Charset encoding) throws Exception{
 		  byte[] encoded = Files.readAllBytes(Paths.get(path));
 		  return new String(encoded, encoding);
 		}
+		
+   /**
+  * Metodo principal de la clase Tokenizer. Recorre una cadena y extrae sus tokens.
+  * La cadena se extrae de un fichero utilizando el metodo readFile
+  * @see TokenizerMain#readFile(String, Charset)
+  * @version 1.1
+  */
 	public static void main( String[] args ) throws Exception
 	{
 		
