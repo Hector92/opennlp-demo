@@ -59,7 +59,22 @@
 			          <target>1.8</target>
 			        </configuration>
 			</plugin>
-
+			   <pluginManagement>
+        <plugin>
+          <groupId>org.jboss.as.plugins</groupId>
+          <artifactId>jboss-as-maven-plugin</artifactId>
+          <version>7.2</version> <!-- or whatever you want -->
+        </plugin>
+        ...
+      </plugins>
+    </pluginManagement>
+    <!-- To use the plugin goals in your POM or parent POM -->
+    <plugins>
+      <plugin>
+          <groupId>org.jboss.as.plugins</groupId>
+          <artifactId>jboss-as-maven-plugin</artifactId>
+          <version>7.2</version> <!-- or whatever you want -->
+        </plugin>
 		</plugins>
 	</build>
 
