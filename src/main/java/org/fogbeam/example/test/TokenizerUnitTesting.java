@@ -104,7 +104,7 @@ public class TokenizerUnitTesting extends TestCase {
 					}
 				}
 			}
-		} catch (FileNotFoundException e1) {
+		} catch(FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
 
